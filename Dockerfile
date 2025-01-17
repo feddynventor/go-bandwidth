@@ -9,4 +9,5 @@ RUN go mod download
 ADD . /usr/src/goapp/
 RUN go mod tidy && go mod verify && go build -o main .
 
+EXPOSE 3000
 ENTRYPOINT [ "./main" ]
